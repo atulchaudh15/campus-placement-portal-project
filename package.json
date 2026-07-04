@@ -1,0 +1,10 @@
+{
+  "name": "campus-placement-portal",
+  "private": true,
+  "scripts": {
+    "server": "npm run dev --prefix server",
+    "seed": "npm run seed --prefix server",
+    "client": "npm start --prefix client",
+    "build": "npm run build --prefix client"
+  }
+}

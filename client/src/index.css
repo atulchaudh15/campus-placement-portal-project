@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f5f0e8;
+  color: #1a1208;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e8650a;
+  border-radius: 10px;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center gap-1.5 px-4 py-2 rounded-[10px] text-[0.83rem] font-semibold cursor-pointer transition-all duration-200 border-none no-underline;
+  }
+  .btn-outline {
+    @apply bg-transparent border-[1.5px] border-border2 text-ink2 hover:border-orange hover:text-orange;
+  }
+  .btn-primary {
+    @apply bg-orange text-white shadow-[0_3px_12px_rgba(232,101,10,0.28)] hover:bg-orange-deep hover:-translate-y-px hover:shadow-[0_8px_20px_rgba(232,101,10,0.38)];
+  }
+  .btn-dark {
+    @apply bg-ink text-white hover:bg-ink2 hover:-translate-y-px;
+  }
+  .btn-lg {
+    @apply px-7 py-3 text-[0.93rem] rounded-xl;
+  }
+  .btn-sm {
+    @apply px-3 py-1.5 text-[0.76rem] rounded-md;
+  }
+  .btn:disabled {
+    @apply opacity-50 cursor-not-allowed hover:translate-y-0;
+  }
+
+  .card {
+    @apply bg-white2 border border-border rounded-2xl;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold;
+  }
+  .badge-orange {
+    @apply bg-orange-s text-orange-deep;
+  }
+  .badge-green {
+    @apply bg-green-s text-green;
+  }
+  .badge-violet {
+    @apply bg-violet-s text-violet;
+  }
+  .badge-coral {
+    @apply bg-coral-s text-coral;
+  }
+  .badge-amber {
+    @apply bg-amber-s text-[#8a5c0a];
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2.5 rounded-lg border border-border bg-white2 text-ink focus:outline-none focus:border-orange text-sm;
+  }
+
+  .navbar {
+    @apply flex justify-between items-center px-[60px] py-[18px] bg-black text-white max-md:px-[30px] max-md:py-[15px] max-sm:flex-col max-sm:items-start;
+  }
+  .logo {
+    @apply text-[22px] font-bold text-white;
+  }
+  .dot {
+    @apply text-[#ff6a00] mr-1.5;
+  }
+  .menu a {
+    @apply text-white ml-6 text-[15px] no-underline transition-colors duration-300 hover:text-[#ff6a00] max-md:ml-4 max-md:text-sm max-sm:block max-sm:my-2 max-sm:ml-0;
+  }
+  .register {
+    @apply bg-[#ff6a00] px-3.5 py-1.5 rounded-md;
+  }
+
+  .toast {
+    @apply fixed bottom-6 right-6 bg-ink text-white px-5 py-3 rounded-xl shadow-lg text-sm z-50;
+  }
+}
